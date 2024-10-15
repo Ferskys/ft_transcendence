@@ -1,0 +1,68 @@
+/ft_transcendence
+├── /backend
+│   ├── /django
+│   │   ├── /api                  # APIs related to the game logic, chat, and authentication
+│   │   ├── /authentication       # JWT and 2FA implementation
+│   │   ├── /microservices        # Separate microservices for different functionalities
+│   │   ├── manage.py
+│   │   ├── requirements.txt      # Python dependencies
+│   │   └── /project_name         # Django project settings and core logic
+│   └── /database
+│       └── /postgresql
+│           ├── /migrations       # Database migration files
+│           ├── /seeds            # Initial data seeding scripts
+│           └── docker-compose.yml # Database container configuration
+
+├── /frontend
+│   ├── /js
+│   │   ├── /game                 # Game logic implementation (Pong game)
+│   │   ├── /spa                  # Single-page application structure
+│   │   └── /threejs              # 3D graphics using Three.js/WebGL
+│   ├── /styles                   # CSS and Bootstrap files for styling
+│   ├── index.html                # Main entry point of the frontend application
+│   └── package.json              # Frontend dependencies
+
+├── /infrastructure
+│   ├── /docker
+│   │   ├── /backend
+│   │   │   ├── Dockerfile        # Dockerfile for Django backend
+│   │   └── /frontend
+│   │       ├── Dockerfile        # Dockerfile for JavaScript frontend
+│   ├── docker-compose.yml        # Docker Compose configuration for orchestrating services
+│   └── /ci-cd
+│       └── /github-actions
+│           ├── ci.yml            # CI configuration for builds and tests
+│           ├── cd.yml            # CD configuration for automated deployment
+│           ├── lint.yml          # Code quality checks and linting configuration
+│           └── secrets           # Secrets management for CI/CD
+
+├── /monitoring
+│   ├── /prometheus
+│   │   └── prometheus.yml        # Configuration file for Prometheus metrics collection
+│   ├── /grafana
+│   │   └── dashboards            # Grafana dashboards for visualizing metrics
+│   └── docker-compose.yml        # Monitoring stack container configuration
+
+├── /logging
+│   ├── /elk-stack
+│   │   ├── /elasticsearch        # Configuration for Elasticsearch
+│   │   ├── /logstash             # Log processing configurations
+│   │   ├── /kibana               # Visualization and dashboard setup
+│   └── docker-compose.yml        # ELK stack orchestration file
+
+├── /docs
+│   ├── /architecture            # System architecture and design documents
+│   ├── /api                     # API documentation for frontend-backend interaction
+│   ├── README.md                # Project overview and setup instructions
+│   └── CONTRIBUTING.md          # Guidelines for contributing to the project
+
+├── /project-management
+│   ├── /github-projects         # Kanban board configuration and task lists
+│   ├── /tasks                   # Task breakdown (Backlog, In Progress, Testing, Done)
+│   └── /reports                 # Weekly progress and status reports
+
+└── /security
+    ├── /waf-modsecurity         # Web Application Firewall setup with ModSecurity
+    ├── /vault                   # Secrets management and security compliance (e.g., GDPR)
+    └── /audit                  # Security audit logs and compliance checks
+
